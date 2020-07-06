@@ -4,7 +4,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/keptn-sandbox/freight-keptn-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/keptn-sandbox/freight-keptn-go)](https://goreportcard.com/report/github.com/keptn-sandbox/freight-keptn-go)
 
-This implements a freight-keptn-go for Keptn. If you want to learn more about Keptn visit us on [keptn.sh](https://keptn.sh)
+This implements a freight-keptn-go for Keptn. If you want to learn more about Keptn visit them on [keptn.sh](https://keptn.sh)
 
 ## Compatibility Matrix
 
@@ -24,7 +24,7 @@ To deploy the current version of the *freight-keptn-go* in your Keptn Kubernetes
 kubectl apply -f deploy/service.yaml
 ```
 
-This should install the `freight-keptn-go` together with a Keptn `distributor` into the `keptn` namespace, which you can verify using
+This should install the `freight-keptn-go` together with a Keptn `distributor` into the `freight-keptn` namespace, which you can verify using
 
 ```console
 kubectl -n keptn get deployment freight-keptn-go -o wide
@@ -59,9 +59,6 @@ It is recommended to make use of branches as follows:
 When writing code, it is recommended to follow the coding style suggested by the [Golang community](https://github.com/golang/go/wiki/CodeReviewComments).
 
 ### Where to start
-
-If you don't care about the details, your first entrypoint is [eventhandlers.go](eventhandlers.go). Within this file 
- you can add implementation for pre-defined Keptn Cloud events.
  
 To better understand Keptn CloudEvents, please look at the [Keptn Spec](https://github.com/keptn/spec).
  
