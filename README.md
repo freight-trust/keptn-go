@@ -1,21 +1,4 @@
-# README
-
-This is a Keptn Service Template written in GoLang. 
-
-Quick start:
-
-1. Click [Use this template](https://github.com/keptn-sandbox/freight-keptn-go/generate) on top of the repository, or download the repo as a zip-file, extract it into a new folder named after the service you want to create (e.g., simple-service) 
-1. Replace every occurrence of (docker) image names and tags from `freightclear/freight-keptn-go` to your docker organization and image name (e.g., `yourorganization/simple-service`)
-1. Replace every occurrence of `freight-keptn-go` with the name of your service (e.g., `simple-service`)
-1. Optional (but recommended): Create a git repo (e.g., on `github.com/your-username/simple-service`)
-1. Àdapt the [go.mod](go.mod) file and change `example.com/` to the actual package name (e.g., `github.com/your-username/simple-service`)
-1. Add yourself to the [CODEOWNERS](CODEOWNERS) file
-1. Initialize a git repository: 
-  * `git init .`
-  * `git add .`
-  * `git commit -m "Initial Commit"`
-1. Optional: Push your code an upstream git repo (e.g., GitHub) and adapt all links that contain `github.com` (e.g., to `github.com/your-username/simple-service`)
-1. Last but not least: Remove this intro within the README file and make sure the README file properly states what this repository is about
+# Keptn Autoscale Cluster
 
 # freight-keptn-go
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/keptn-sandbox/freight-keptn-go)
@@ -65,8 +48,6 @@ kubectl delete -f deploy/service.yaml
 ```
 
 ## Development
-
-Development can be conducted using any GoLang compatible IDE/editor (e.g., Jetbrains GoLand, VSCode with Go plugins).
 
 It is recommended to make use of branches as follows:
 
@@ -123,34 +104,10 @@ You can find the details in [.github/workflows/tests.yml](.github/workflows/test
 
 ### Travis-CI: Build Docker Images
 
-This repo uses [Travis-CI](https://travis-ci.org) to automatically build docker images. This process is optional and needs to be manually 
-enabled by signing in into [travis-ci.org](https://travis-ci.org) using GitHub and enabling Travis for your repository.
-
-After enabling Travis-CI, the following settings need to be added as secrets to your repository on the Travis-CI Repository Settings page:
-
-* `REGISTRY_USER` - your DockerHub username
-* `REGISTRY_PASSWORD` - a DockerHub [access token](https://hub.docker.com/settings/security) (alternatively, your DockerHub password)
-
-Furthermore, the variable `IMAGE` needs to be configured properly in the respective section:
-```yaml
-env:
-  global:
-    - IMAGE=freightclear/freight-keptn-go # PLEASE CHANGE THE IMAGE NAME!!!
-```
+This repo uses [Travis-CI](https://travis-ci.org) to automatically build docker images. 
 You can find the implementation of the build-job in [.travis.yml](.travis.yml).
 
-## How to release a new version of this service
-
-It is assumed that the current development takes place in the master branch (either via Pull Requests or directly).
-
-To make use of the built-in automation using Travis CI for releasing a new version of this service, you should
-
-* branch away from master to a branch called `release-x.y.z` (where `x.y.z` is your version),
-* write release notes in the [releasenotes/](releasenotes/) folder,
-* check the output of Travis CI builds for the release branch, 
-* verify that your image was built and pushed to DockerHub with the right tags,
-* update the image tags in [deploy/service.yaml], and
-* test your service against a working Keptn installation.
+## Releases
 
 If any problems occur, fix them in the release branch and test them again.
 
