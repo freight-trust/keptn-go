@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="go build example.com/freight-keptn-go" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="freight-keptn-go" />
+    <working_directory value="$PROJECT_DIR$" />
+    <kind value="PACKAGE" />
+    <package value="example.com/freight-keptn-go" />
+    <directory value="$PROJECT_DIR$/" />
+    <method v="2" />
+  </configuration>
+</component>
